@@ -1,0 +1,27 @@
+/* Optional starter; scope or merge with existing tokens. */
+:root {
+  color-scheme: light;
+  --ui-bg: #faf8f4; --ui-surface: #ffffff; --ui-text: #202923;
+  --ui-muted: #526159; --ui-border: #78857c; --ui-accent: #245441;
+  --ui-on-accent: #ffffff; --ui-focus: #245441; --ui-danger: #a22020;
+  --ui-font-body: system-ui, sans-serif; --ui-font-display: Georgia, serif;
+  --ui-type-hero: clamp(2.25rem, 5vw, 5rem);
+  --ui-gutter: clamp(1rem, 4vw, 3rem); --ui-container: 80rem;
+  --ui-section: clamp(3rem, 7vw, 7rem); --ui-gap: clamp(1rem, 3vw, 2rem);
+  --ui-radius: .5rem; --ui-duration: 180ms;
+}
+:root[data-theme="dark"] { color-scheme: dark; --ui-bg: #141b17; --ui-surface: #202923; --ui-text: #f5f5ef; --ui-muted: #b5c4ba; --ui-border: #829187; --ui-accent: #a8dfbd; --ui-on-accent: #14281b; --ui-focus: #a8dfbd; --ui-danger: #ffaaaa; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) { color-scheme: dark; --ui-bg: #141b17; --ui-surface: #202923; --ui-text: #f5f5ef; --ui-muted: #b5c4ba; --ui-border: #829187; --ui-accent: #a8dfbd; --ui-on-accent: #14281b; --ui-focus: #a8dfbd; --ui-danger: #ffaaaa; } }
+.ui-container { box-sizing: border-box; width: min(100%, var(--ui-container)); margin-inline: auto; padding-inline: var(--ui-gutter); }
+.ui-section { padding-block: var(--ui-section); color: var(--ui-text); background: var(--ui-bg); }
+.ui-heading { font: 400 var(--ui-type-hero)/1.05 var(--ui-font-display); margin: 0; overflow-wrap: anywhere; }
+.ui-button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-sizing: border-box; padding: .75rem 1.25rem; border: 1px solid transparent; border-radius: var(--ui-radius); background: var(--ui-accent); color: var(--ui-on-accent); font: inherit; text-decoration: none; cursor: pointer; transition: transform var(--ui-duration); }
+.ui-button:disabled { opacity: .65; cursor: not-allowed; }
+.ui-button:not(:disabled):hover { transform: translateY(-2px); }
+.ui-button:focus-visible, .ui-nav button:focus-visible, .ui-nav a:focus-visible, .ui-faq summary:focus-visible { outline: 3px solid var(--ui-focus); outline-offset: 3px; }
+.ui-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: var(--ui-gap); }
+.ui-nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 1rem; }
+.ui-nav a { color: var(--ui-text); display: inline-flex; min-height: 44px; align-items: center; }
+.ui-nav button { min-height: 44px; }
+.ui-faq summary { cursor: pointer; padding-block: 1rem; }
+@media (prefers-reduced-motion: reduce) { .ui-button { transition: none; } .ui-button:hover { transform: none; } }

@@ -1,0 +1,11 @@
+# Project design brief
+- Business, audience, primary task and success metric:
+- Existing routes, features and constraints:
+- Brand attributes, assets, licenses and reference sites:
+- Art direction and alternatives:
+- Semantic colors, typography, spacing and layout:
+- Page narrative and component inventory:
+- Mobile, keyboard, reduced motion and theme behavior:
+- Loading, error, empty and success states:
+- Performance risks and verification plan:
+- Assumptions, approvals and out-of-scope changes:
